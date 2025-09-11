@@ -10,6 +10,13 @@ def streamText(text):
     print()
 
 
+
+# TODO use tool call functions to create
+
+
+
+
+
 def main():
     
     streamText("How can I help you today?")
