@@ -19,7 +19,8 @@ def main():
     df = pd.read_csv("transcriptions.csv")
     df.head()
 
-    client = OpenAI(os.getenv('OPENAPI_KEY'))
+    client = OpenAI(
+        api_key=os.os.getenv('OPENAPI_KEY'))
 
 
     medSpecialtyList = df['medical_specialty'].to_list()
