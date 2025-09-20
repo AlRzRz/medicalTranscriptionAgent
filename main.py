@@ -137,7 +137,7 @@ def main():
 
     intermDf = pd.DataFrame(lstOfIcds)
 
-    finalDf['icd_code'] = intermDf['code']
+    finalDf['icd_code'] = intermDf['icd_code']
 
     df_structured = finalDf
     print(df_structured)
