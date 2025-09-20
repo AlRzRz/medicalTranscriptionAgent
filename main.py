@@ -2,6 +2,8 @@ import time
 import pandas as pd
 from openai import OpenAI
 import json
+import os
+from dotenv import load_dotenv
 
 # GPT-like fluid text streaming into the terminal
 def streamText(text):
@@ -17,7 +19,7 @@ def main():
     df = pd.read_csv("transcriptions.csv")
     df.head()
 
-    client = OpenAI()
+    client = OpenAI(os.getenv('OPENAPI_KEY'))
 
 
     medSpecialtyList = df['medical_specialty'].to_list()
