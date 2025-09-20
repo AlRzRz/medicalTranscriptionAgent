@@ -19,8 +19,9 @@ def main():
     df = pd.read_csv("transcriptions.csv")
     df.head()
 
+    load_dotenv()
     client = OpenAI(
-        api_key=os.os.getenv('OPENAPI_KEY'))
+        api_key=os.getenv('OPENAPI_KEY'))
 
 
     medSpecialtyList = df['medical_specialty'].to_list()
@@ -144,3 +145,5 @@ def main():
 
     df_structured = finalDf
     print(df_structured)
+
+main()
