@@ -14,7 +14,7 @@ def streamText(text):
 
 
 def main():
-    df = pd.read_csv("data/transcriptions.csv")
+    df = pd.read_csv("transcriptions.csv")
     df.head()
 
     client = OpenAI()
